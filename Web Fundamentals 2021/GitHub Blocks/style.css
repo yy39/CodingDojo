@@ -1,0 +1,31 @@
+body {
+    background-color: gainsboro
+}
+
+div {
+    height: 200px;
+    width: auto;
+    display: flex;
+    padding: 20px;
+    margin: 20px 10px;
+}
+
+h1 {
+    text-align: center;
+    color: darkslategray;
+}
+
+.firstrow {
+    background-color: aqua;
+    justify-content: space-around;
+}
+
+.secondrow {
+    background: pink;
+    justify-content: space-around;
+}
+
+.thirdrow {
+    background: white;
+    justify-content: space-around;
+}

@@ -1,0 +1,29 @@
+div {
+    padding: 5px;
+}
+
+.first {
+    width: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: cadetblue;
+    border-color: cadetblue;
+}
+
+.second {
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    border-radius: 50%;
+    font-size: larger;
+    vertical-align: middle;
+    color: white;
+    background-color: turquoise;
+}
+
+.third {
+    width: 125px;
+    box-shadow: 3px 4px 1px black;
+    color: white;
+    background-color: blue;
+}
