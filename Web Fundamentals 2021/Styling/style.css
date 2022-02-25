@@ -1,0 +1,26 @@
+h1 {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+h1 > span {
+    color: aqua;
+}
+
+h2 {
+    padding: 5px 10px;
+    font-style: italic;
+    text-align: center;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+h3 {
+    padding: 5px 10px;
+    text-decoration: underline;
+    text-align: end;
+    background-color: lightblue;
+    color: darkblue;
+}
