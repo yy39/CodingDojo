@@ -1,0 +1,24 @@
+.row {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.row > div {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: cadetblue;
+}
+
+.col {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col-3 {
+    flex: 3;
+}
