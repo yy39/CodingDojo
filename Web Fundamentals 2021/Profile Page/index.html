@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="pane-container">
+            <ul class="nav-links">
+                <h1 class="nav-title">Profile</h1>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">My Profile</a></li>
+                <li><a href="#">Find Connections</a></li>
+            </ul>
+        </div>
+        <div class="pane-container">
+            <div class="signout">
+                <li><button class="navbtn">Sign Out</button></li>
+            </div>
+        </div>
+    </div>
+    <div class="pane-container">
+        <div class="pane">
+            <div class="user-card-container">
+                <div class="user-card-banner">
+                    <div class="user-card-circle-container">
+                        <img src="icons/user-circle.png" class="user-card-profile-image" alt="user-circle">
+                    </div>
+                </div>
+                <div class="user-card">
+                    <h1>Jane Doe</h1>
+                    <div class="user-card-icon-text">
+                        <img class="user-card-icon" src="icons/map-marker.png" alt="map-marker">
+                        <label class="icon-caption" for="user-card-location">Seattle</label>
+                    </div>
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of shadows and the Internet!</p>
+                    <div class="user-card-icon-text">
+                        <img class="user-card-icon" src="icons/gear.png" alt="gear">
+                        <label class="icon-caption" for="user-card-edit-profile"><a href="#">edit profile</a></label>
+                    </div>
+                </div>
+            </div>
+            <div class="education">
+                <div class="banner"><label for="education" class="education-label">Education</label></div>
+                <ul class="education-list">
+                    <li class="education-experience">
+                        <p class="education-name">Coding Dojo - Full Stack Bootcamp</p>
+                        <p class="education-date">Dec 2019 - Mar 2020</p>
+                        <p class="education-desc">Triple black belt in Python, MERN, and C#...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pane">
+            <div class="connection-requests">
+                <div class="banner">
+                    <div class="connection-requests-counter">
+                        <a href="#">2</a>
+                    </div>
+                    <a href="#">Connection Requests</a>
+                </div>
+                <div>
+                    <ul class="incoming-requests">
+                        <div class="request-container">
+                            <div class="requesting-user">
+                                <img src="icons/user-circle.png" alt="request-user">
+                                <li class="request">Todd E</li>
+                            </div>
+                            <div class="yesno">
+                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"></a>
+                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"></a>
+                            </div>
+                        </div>
+                        <div class="request-container">
+                            <div class="requesting-user">
+                                <img src="icons/user-circle.png" alt="request-user">
+                                <li class="request">Phil K</li>
+                            </div>
+                            <div class="yesno">
+                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"></a>
+                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"></a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="your-connections">
+                <div class="banner">
+                    <div class="connections-counter">
+                        <a href="#">500+</a>
+                    </div>
+                    <a href="#">Your Connections</a>
+                </div>
+                <ul class="connections-list">
+                    <li class="connection">
+                        <img src="icons/user-circle.png" alt="connection-image">
+                        <a href="#"> Adrien D</a>
+                    </li>
+                    <li class="connection">
+                        <img src="icons/user-circle.png" alt="connection-image">
+                        <a href="#">Anne J</a>
+                    </li>
+                    <li class="connection">
+                        <img src="icons/user-circle.png" alt="connection-image">
+                        <a href="#">Alayne T</a>
+                    </li>
+                    <li class="connection">
+                        <img src="icons/user-circle.png" alt="connection-image">
+                        <a href="#">Arry Y</a>
+                    </li>
+                </ul>
+                <div class="view-more">
+                    <a href="#">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

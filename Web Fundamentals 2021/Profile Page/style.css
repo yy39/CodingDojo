@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.nav {
+    width: auto;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.nav-title {
+    margin: 10px;
+    color: white;
+}
+
+.nav-links {
+    width: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links > li{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline;
+}
+
+
+.nav-links > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.signout {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbtn {
+    padding: 5px 15px;
+    border-width: 2px;
+    justify-content: flex-end;
+    border-color: black;
+    box-shadow: 3px 3px black;
+    color: white;
+    background-color: rgb(66, 194, 194);
+}
+
+.user-card-container  {
+    width: 500px;
+}
+
+.user-card-banner {
+    background-color: rgb(63, 168, 175);
+}
+
+.user-card-circle-container{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 3px solid grey;
+    border-radius: 50%;
+    position: relative;
+    top: 50px;
+    left: 25px;
+}
+
+.user-card-profile-image {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.user-card {
+    border: 2px solid grey;
+    border-style: none solid solid solid;
+    padding: 20px 20px 10px 20px;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+.user-card-icon-text {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: 15px;
+}
+
+.icon-caption {
+    margin-left: 5px;
+}
+
+.pane {
+    width: auto;
+    padding: 25px 25px 0px 0px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.pane > div {
+    margin-bottom: 25px;
+}
+
+.pane-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+}
+
+.nav > div.pane-container {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner {
+    width: 250px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(63, 75, 75);
+    color: white;
+}
+
+.education-label {
+    justify-content: flex-start;
+    margin: 10px auto 10px 10px;
+    color: white;
+}
+
+.banner > a {
+    font-size: large;
+    text-decoration: none;
+    color: white;
+}
+
+.connection-requests {
+    border: 2px solid grey;
+}
+
+.incoming-requests {
+    text-decoration: none;
+}
+
+.request {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+li.request {
+    margin-left: 10px;
+}
+
+.yesno {
+    display: inline-flex;
+}
+
+.yesno > a {
+    text-decoration: none;
+}
+
+.yes > img, .no > img{
+    margin: 0px 5px;
+    height: 30px;
+    width: 30px;
+}
+
+.connection-requests-counter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px 0px;
+    display: flex;
+    background-color: grey;
+}
+
+.connection-requests-counter > a {
+    position: relative;
+    left: 11px;
+    top: 6px;
+    text-decoration: none;
+    color: black
+}
+
+.request-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.requesting-user > img {
+    margin: 0px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.requesting-user {
+    display: flex;
+    align-items: center;
+}
+
+.connections-counter {
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px 0px;
+    display: flex;
+    background-color: grey;
+}
+
+
+.connections-counter > a {
+    text-decoration: none;
+    position: relative;
+    left: 10px;
+    top: 6px;
+    color: black;
+}
+
+.connections-list > li {
+    display: flex;
+    text-decoration: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.your-connections {
+    border: 2px solid grey;
+}
+
+.connection {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.connection > img {
+    margin: 0px 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.view-more {
+    padding: 10px 20px;
+    border: 2px solid grey;
+    border-style: solid none none;
+}
+
+div.education {
+    width: 500px;
+}
+
+ul > li.education-experience {
+    display: block;
+    text-decoration: none;
+}
+
+div.education > div.banner {
+    width: 480px;
+}
+
+.education-list {
+    border: 2px solid grey;
+    padding: 10px 20px;
+}
+
+.education-experience > p {
+    margin: 10px 0px 10px;
+}
+
+.education-date {
+    color: grey;
+}
+
+.view-more > a {
+    color: blue;
+}
