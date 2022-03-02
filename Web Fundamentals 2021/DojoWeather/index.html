@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gridContainer">
+        <div class="leftBlocker"></div>
+        <div class="gridItem head">
+            <div class="headerTitle">
+                <h1 class="headerTitle"><a href="index.html">DojoWeather</a></h1>
+            </div>
+            <div class="headerOptions">
+                <h3 onclick="loadWeather()"><a href="#">Burbank</a></h3>
+                <h3 onclick="loadWeather()"><a href="#">Chicago</a> </h3>
+                <h3 onclick="loadWeather()"><a href="#">Dallas</a> </h3>
+            </div>
+        </div>
+        <div class="rightBlocker"></div>
+        <div class="gridItem city">
+            <h2>San Jose</h2>
+        </div>
+        <div class="gridItem temp">
+            <label for="temperatureOption">show temperature in</label>
+            <select name="" id="degrees" onchange="changeDegrees(value)">
+                <option value="C">℃</option>
+                <option value="F">℉</option>
+            </select>
+        </div>
+        <div class="gridItem wCard">
+            <div class="cardGridContainer" id="firstCard">
+                <div class="wCardItem day">
+                    <h4>Today</h4>
+                </div>
+                <div class="wCardItem weather">
+                    <img src="assets/some_rain.png" alt="some rain">
+                    <p>some rain</p>
+                </div>
+                <div class="wCardItem high">
+                    <h4>
+                        <span id="high1">24</span>°
+                    </h4>
+                </div>
+                <div class="wCardItem low">
+                    <h4>
+                        <span id="low1">18</span>°
+                    </h4>
+                </div>
+            </div>
+            <div class="cardGridContainer">
+                <div class="wCardItem day">
+                    <h4>Tomorrow</h4>
+                </div>
+                <div class="wCardItem weather">
+                    <img src="assets/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                </div>
+                <div class="wCardItem high">
+                    <h4>
+                        <span id="high2">27</span>°
+                    </h4>
+                </div>
+                <div class="wCardItem low">
+                    <h4>
+                        <span id="low2">19</span>°
+                    </h4>
+                </div>
+            </div>
+            <div class="cardGridContainer">
+                <div class="wCardItem day">
+                    <h4>Tomorrow</h4>
+                </div>
+                <div class="wCardItem weather">
+                    <img src="assets/some_clouds.png" alt="some sun">
+                    <p>some clouds</p>
+                </div>
+                <div class="wCardItem high">
+                    <h4>
+                        <span id="high3">21</span>°
+                    </h4>
+                </div>
+                <div class="wCardItem low">
+                    <h4>
+                        <span id="low3">16</span>°
+                    </h4>
+                </div>
+            </div>
+            <div class="cardGridContainer" id="lastCard">
+                <div class="wCardItem day">
+                    <h4>Tomorrow</h4>
+                </div>
+                <div class="wCardItem weather">
+                    <img src="assets/some_sun.png" alt="some sun">
+                    <p>some sun</p>
+                </div>
+                <div class="wCardItem high">
+                    <h4>
+                        <span id="high4">26</span>°
+                    </h4>
+                </div>
+                <div class="wCardItem low">
+                    <h4>
+                        <span id="low4">21</span>°
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="gridItem foot">
+            <div class="popUpGridContainer" id="popUp">
+                <img src="assets/cookie.png" alt="blah" class="popUpImg">
+                <div class="popUpTitle">
+                    <h2>Stop! Cookie time</h2>
+                </div>
+                <div class="popUpDesc">We use cookies (sadly not the edible ones) to personalize content and ads, to
+                    provide social media features and to analyse our traffic. <a href="#">Read more...</a></div>
+                <div class="popUpBtn">
+                    <button onclick="acceptCookies()">I Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
