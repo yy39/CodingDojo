@@ -136,7 +136,8 @@ div.foot {
 }
 
 .weather > img {
-    width: 100px;
+    margin-bottom: 20px;
+    width: 70%;
     border-radius: 50%;
 }
 
