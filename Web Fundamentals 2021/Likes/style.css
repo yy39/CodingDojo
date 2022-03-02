@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns:.75fr repeat(3, 1fr) .75fr;
+    grid-template-rows: repeat(2, auto) repeat(4, 1fr);
+    grid-template-areas: 
+    "lb head head head rb"
+    "lb fl fl fl rb"
+    "lb user feed feed rb"
+    "lb user feed feed rb"
+    "lb . feed feed rb"
+    ;
+}
+
+.card-grid-container {
+    margin: 0px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "name likes likeButton"
+    "desc desc desc"
+    ;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.left-blocker {
+    grid-area: lb;
+}
+
+.header {
+    padding: 10px 20px;
+    grid-area: head;
+    background-color: black;
+    color: white;
+}
+
+.right-blocker {
+    grid-area: rb;
+}
+
+.feed-label {
+    padding: 10px;
+    grid-area: fl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    margin: 0px 25px 25px 0px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    grid-area: user;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user > a {
+    margin: 10px 0px;
+}
+
+.user > img {
+    width: 100px;
+}
+
+.feed {
+    grid-area: feed;
+}
+
+.name {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+    grid-area: name;
+}
+
+.likes {
+    margin: 25px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: likes;
+    font-weight: bold;
+}
+
+.likeButton {
+    margin: 20px 30px auto;
+    height: 30px;
+    grid-area: likeButton;
+    font-weight: bold;
+    background-color: yellow;
+    box-shadow: 2px 2px 2px black;
+}
+
+.desc {
+    margin: 10px 30px;
+    grid-area: desc;
+    font-weight: bold;
+}
