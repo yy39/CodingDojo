@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="user-card">
-                    <h1>Jane Doe</h1>
+                    <h1 id="username">Jane Doe</h1>
                     <div class="user-card-icon-text">
                         <img class="user-card-icon" src="icons/map-marker.png" alt="map-marker">
                         <label class="icon-caption" for="user-card-location">Seattle</label>
@@ -49,7 +49,9 @@
                     <p>Master of shadows and the Internet!</p>
                     <div class="user-card-icon-text">
                         <img class="user-card-icon" src="icons/gear.png" alt="gear">
-                        <label class="icon-caption" for="user-card-edit-profile"><a href="#">edit profile</a></label>
+                        <label class="icon-caption" for="user-card-edit-profile" id="editProfile"><a href="#"
+                                onclick="changeName(this)">edit
+                                profile</a></label>
                     </div>
                 </div>
             </div>
@@ -65,33 +67,37 @@
             </div>
         </div>
         <div class="pane">
-            <div class="connection-requests">
+            <div class="connection-requests" id="connectionRequestsContainer">
                 <div class="banner">
                     <div class="connection-requests-counter">
-                        <a href="#">2</a>
+                        <a href="#" id="connectionRequestsCounter">2</a>
                     </div>
                     <a href="#">Connection Requests</a>
                 </div>
                 <div>
                     <ul class="incoming-requests">
-                        <div class="request-container">
+                        <div class="request-container" id="request1">
                             <div class="requesting-user">
                                 <img src="icons/user-circle.png" alt="request-user">
                                 <li class="request">Todd E</li>
                             </div>
                             <div class="yesno">
-                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"></a>
-                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"></a>
+                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"
+                                        onclick="remove(this, 'request1')"></a>
+                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"
+                                        onclick="remove(this, 'request1')"></a>
                             </div>
                         </div>
-                        <div class="request-container">
+                        <div class="request-container" id="request2">
                             <div class="requesting-user">
                                 <img src="icons/user-circle.png" alt="request-user">
                                 <li class="request">Phil K</li>
                             </div>
                             <div class="yesno">
-                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"></a>
-                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"></a>
+                                <a class="yes" href="#"><img src="icons/accept-circle.png" alt="accept-circle"
+                                        onclick="remove(this, 'request2')"></a>
+                                <a class="no" href="#"><img src="icons/close-circle.png" alt="close-circle"
+                                        onclick="remove(this, 'request2')"></a>
                             </div>
                         </div>
                     </ul>
@@ -100,7 +106,7 @@
             <div class="your-connections">
                 <div class="banner">
                     <div class="connections-counter">
-                        <a href="#">500+</a>
+                        <a href="#" id="connectionsCounter">418</a>
                     </div>
                     <a href="#">Your Connections</a>
                 </div>
@@ -128,6 +134,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
