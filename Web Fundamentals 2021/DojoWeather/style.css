@@ -167,6 +167,10 @@ div.foot {
     padding: 5px;
 }
 
+.wCardItem > h4 {
+    font-size: 110%;
+}
+
 .popUpGridContainer {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
