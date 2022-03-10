@@ -1,4 +1,5 @@
-from flask import Flask  # Import Flask to allow us to create our app
+# Import Flask to allow us to create our app
+from flask import Flask, render_template
 # Create a new instance of the Flask class called "app"
 app = Flask(__name__)
 
@@ -6,7 +7,7 @@ app = Flask(__name__)
 # The "@" decorator associates this route with the function immediately following
 @app.route('/')
 def hello_world():
-    return 'Hello World!'  # Return the string 'Hello World!' as a response
+    return render_template('index.html')
 
 # import statements, maybe some other routes
 
@@ -17,10 +18,9 @@ def success():
 
 
 # for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
-@app.route('/hello/<name>')
-def hello(name):
-    print(name)
-    return "Hello, " + name
+@app.route('/hello/<string:banana>/<int:num>')
+def hello(banana, num):
+    return render_template('hello.html', banana=banana, num=num)
 
 
 # app.run(debug=True) should be the very last statement!
