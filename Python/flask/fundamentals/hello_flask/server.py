@@ -1,15 +1,22 @@
 # Import Flask to allow us to create our app
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 # Create a new instance of the Flask class called "app"
 app = Flask(__name__)
 
 
 # The "@" decorator associates this route with the function immediately following
 @app.route('/')
-def hello_world():
+def index():
     return render_template('index.html')
 
-# import statements, maybe some other routes
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    print("Got Post Info")
+    print(request.form)
+    # Never render a template on a POST request.
+    # Instead we will redirect to our index route.
+    return redirect('/')
 
 
 @app.route('/success')
