@@ -5,20 +5,16 @@ app.secret_key = 'not very secret secret key'
 
 @app.route("/")
 def index():
-    if session:
-        print("Session Info")
-        print(session)
-        if session['action'] == 'Increment':
-            session['counter'] += 1
-        else:
+    if 'action' in session:
+        if session['action'] == 'Reset':
             session.clear()
-    if not session:
-        session['counter'] = 1
+            session['counter'] = 0
+    session['counter'] += 1
     counter = session['counter']
     return render_template("index.html", counter=counter)
 
 
-@ app.route('/button_click', methods=['POST'])
+@app.route('/button_click', methods=['POST'])
 def increment():
     session['action'] = request.form['action']
     return redirect('/')
