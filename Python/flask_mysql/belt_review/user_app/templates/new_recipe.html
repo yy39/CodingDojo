@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Tracker</title>
+</head>
+
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="nav">
+                    <li><a class="nav nav-link text-light" href="/">Home</a></li>
+                </ul>
+                {% if user_info %}
+                <div class="text-end d-flex align-items-center">
+                    <span>{{ user_info.first_name }}</span>
+                    <a class="btn btn-outline-light mx-2" href="/dashboard">Dashboard</a>
+                    <a class="btn btn-outline-light mx-2" href="/logout">Logout</a>
+                </div>
+                {% else %}
+                <div class="text-end d-flex align-items-center">
+                    <a class="btn btn-outline-light me-2" href="/login">Login</a>
+                    <a class="btn btn-warning" href="/register">Sign Up</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <h1 class="text-center">Add New Recipe</h1>
+    <div class="container d-flex justify-content-center">
+        <form class="d-flex flex-column" action="/recipes/create" method="post">
+            <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
+            <textarea class="form-control mb-2" name="description" cols="30" rows="4" placeholder="Description"
+                required></textarea>
+            <textarea class="form-control mb-2" name="instruction" cols="30" rows="4" placeholder="Instructions"
+                required></textarea>
+            <label class="text-secondary" for="created_at">Date created:</label>
+            <input class="form-control text-secondary mb-2" type="datetime-local" name="created_at" required>
+            <label class="text-secondary" for="under_thirty">Under 30 min?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="under_thirty" value="1">
+                <label class="form-check-label text-secondary" for="invalidCheck2">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="under_thirty" value="0">
+                <label class="form-check-label text-secondary">No</label>
+            </div>
+            <input class="btn btn-warning mt-3" type="submit" value="Create">
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="list-group">
+            {% for message in messages %}
+            <li class="text-decoration-none">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+
+</html>

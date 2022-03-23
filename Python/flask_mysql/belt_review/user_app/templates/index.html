@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Tracker</title>
+</head>
+
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="nav">
+                    <li><a class="nav nav-link text-light" href="/">Home</a></li>
+                </ul>
+                {% if user_info %}
+                <div class="text-end d-flex align-items-center">
+                    <span>{{ user_info.first_name }}</span>
+                    <a class="btn btn-outline-light mx-2" href="/recipes/new">New Recipe</a>
+                    <a class="btn btn-outline-light mx-2" href="/logout">Logout</a>
+                </div>
+                {% else %}
+                <div class="text-end d-flex align-items-center">
+                    <a class="btn btn-outline-light me-2" href="/login">Login</a>
+                    <a class="btn btn-warning" href="/register">Sign Up</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <h1 class="text-center">Recipes</h1>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="nav">
+                    <li"><a class="nav nav-link text-light" href="/">Home</a></li>
+                </ul>
+                <div class="text-end">
+                    <a class="btn btn-outline-light me-2" href="/login">Login</a>
+                    <a class="btn btn-warning" href="/register">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Register</h1>
+        <div class="container d-flex justify-content-center">
+            <form class="d-flex flex-column" action="/create" method="post">
+                <input type="text" name="first_name" class="form-control mb-2" placeholder="First Name" required>
+                <input type="text" name="last_name" class="form-control mb-2" placeholder="Last Name" required>
+                <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
+                <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+                <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password"
+                    required>
+                <input class="btn btn-warning mt-3" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="list-group">
+            {% for message in messages %}
+            <li class="text-decoration-none">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="nav">
+                    <li"><a class="nav nav-link text-light" href="/">Home</a></li>
+                </ul>
+                <div class="text-end">
+                    <a class="btn btn-outline-light me-2" href="/login">Login</a>
+                    <a class="btn btn-warning" href="/register">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Login</h1>
+        <div class="container d-flex justify-content-center">
+            <form class="d-flex flex-column" action="/login" method="post">
+                <input type="email" class="form-control mb-2" placeholder="Email" name="email">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input class="btn btn-success mt-3" type="submit" value="Login">
+            </form>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <p>No account? Register <a href="/register">here</a></p>
+        </div>
+        <div class="container d-flex justify-content-center">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="list-group">
+                {% for message in messages %}
+                <li class="text-decoration-none">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+
+</html>

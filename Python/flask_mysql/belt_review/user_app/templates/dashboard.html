@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Tracker</title>
+</head>
+
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <ul class="nav">
+                    <li><a class="nav nav-link text-light" href="/">Home</a></li>
+                </ul>
+                {% if user_info %}
+                <div class="text-end d-flex align-items-center">
+                    <span>{{ user_info.first_name }}</span>
+                    <a class="btn btn-outline-light mx-2" href="/recipes/new">New Recipe</a>
+                    <a class="btn btn-outline-light mx-2" href="/logout">Logout</a>
+                </div>
+                {% else %}
+                <div class="text-end d-flex align-items-center">
+                    <a class="btn btn-outline-light me-2" href="/login">Login</a>
+                    <a class="btn btn-warning" href="/register">Sign Up</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    <h1 class="text-center">Welcome {{ user_info.first_name }}!</h1>
+    <p class="text-center">These are the recipes</p>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">&lt; 30 min?</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if user_recipes %}
+                    {% for recipe in user_recipes %}
+                    <tr>
+                        <th scope="row">{{ recipe.id }}</th>
+                        <td>{{ recipe.name }}</td>
+                        {% if recipe.under_thirty == 1 %}
+                        <td>Yes</td>
+                        {% elif recipe.under_thirty == 0 %}
+                        <td>No</td>
+                        {% endif %}
+                        <td>
+                            <a href="/recipes/{{ recipe.recipes_id }}">View</a>
+                            {% if recipe.users_id == session["user_id"] %}
+                            <a href="/recipes/edit/{{ recipe.recipes_id }}">Edit</a>
+                            <a href="/recipes/delete/{{ recipe.recipes_id }}">Delete</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
