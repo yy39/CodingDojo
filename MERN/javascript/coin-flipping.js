@@ -16,10 +16,10 @@ function fiveHeads() {
                 headsCount = 0;
             }
         }
-        if (headsCount === 5) {
+        if (headsCount === 5 && attempts < 100) {
             resolve(`It took ${attempts} attempts`);
         } else {
-            reject("Uh-oh stinky!");
+            reject(`Rejected since we ran ${attempts} out of our 100 chances.`);
         }
     });
 }
