@@ -3,6 +3,7 @@ import HeaderForm from './components/HeaderForm';
 import People from './views/People';
 import Planet from './views/Planet';
 import Error from './views/Error';
+import Welcome from './views/Welcome';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <HeaderForm />
 
         <Routes>
+          <Route path="/" element={<Welcome />} />
           <Route path="/people/:id" element={<People />} />
           <Route path="/planets/:id" element={<Planet />} />
           <Route path="*" element={<Error />} />
